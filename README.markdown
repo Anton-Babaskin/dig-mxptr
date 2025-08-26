@@ -1,4 +1,4 @@
-# mxptr-resolver
+# dig-mxptr
 
 [![ShellCheck](https://github.com/Anton-Babaskin/dig-mxptr/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/Anton-Babaskin/dig-mxptr/actions/workflows/shellcheck.yml)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
