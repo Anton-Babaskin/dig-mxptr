@@ -1,49 +1,73 @@
-# mxptr-resolver
-Утилита для массового разрешения доменов, поддоменов и IP в их реальные MX, A/AAAA и PTR записи. Полезно для настройки Postfix / Postgrey whitelist, мониторинга инфраструктуры и диагностики проблем с доставкой почты.
+mxptr-resolver
+A powerful utility for bulk resolving domains, subdomains, and IPs into their corresponding MX, A/AAAA, and PTR records. Ideal for configuring Postfix/Postgrey whitelists, monitoring infrastructure, and diagnosing email delivery issues.
 
-## Возможности
-- Принимает список доменов, хостов и IP (по одному в строке).
-- Для доменов: находит MX-записи, их IP-адреса и PTR.
-- Для отдельных хостов: находит A/AAAA-записи и PTR.
-- Для IP: определяет PTR hostname.
-- Сохраняет результат в табличный `.txt` файл с колонками: `Domain  Role  Target  IP  PTR`
+✨ Features
 
-## Установка
-git clone https://github.com/yourusername/mxptr-resolver.git
-cd mxptr-resolver
-chmod +x mxptr-resolver.sh
+Input Flexibility: Accepts a list of domains, hosts, and IP addresses (one per line).
+Domain Resolution: Resolves MX records, their associated IP addresses, and PTR records.
+Host Resolution: Retrieves A/AAAA records and PTR records for individual hosts.
+IP Resolution: Determines PTR hostnames for IP addresses.
+Output: Saves results in a clean, tabular .txt file with columns: Domain, Role, Target, IP, PTR.
 
-## Использование
-1. Подготовь файл domains.txt со списком доменов/хостов/IP:
+
+🚀 Installation
+
+Clone the repository:git clone https://github.com/yourusername/mxptr-resolver.git
+
+
+Navigate to the project directory:cd mxptr-resolver
+
+
+Make the script executable:chmod +x mxptr-resolver.sh
+
+
+
+
+🛠️ Usage
+
+Prepare Input File: Create a file (e.g., domains.txt) with a list of domains, hosts, or IPs, one per line:
 isbank.com.tr
 mail.isbank.com.tr
 212.174.23.15
 akbank.com
 
-2. Запусти скрипт:
+
+Run the Script:
 ./mxptr-resolver.sh
 
-По умолчанию:
-- входной файл: domains.txt
-- выходной файл: resolved_whitelist.txt
 
-3. Можно указать свои файлы:
+Default input file: domains.txt
+Default output file: resolved_whitelist.txt
+
+
+Custom Input/Output: Specify your own input and output files:
 ./mxptr-resolver.sh input.txt output.txt
 
-4. Проверить результат:
+
+View Results: Check the output file:
 cat resolved_whitelist.txt
 
-## Пример результата
+
+
+
+📊 Example Output
 # Generated: 2025-08-26 12:45:00 +0300
 Domain              Role    Target                IP             PTR
 isbank.com.tr       MX      mail.isbank.com.tr    212.174.x.x    mail.isbank.com.tr
 mail.isbank.com.tr  Host    mail.isbank.com.tr    212.174.x.x    mail.isbank.com.tr
 212.174.23.15       IP      212.174.23.15         212.174.23.15  mail.isbank.com.tr
 
-## Требования
-- bash
-- dig и host (пакет dnsutils в Debian/Ubuntu):
-sudo apt-get install dnsutils -y
 
-## Лицензия
-MIT — делай с кодом, что хочешь.
+📋 Requirements
+
+bash: Standard shell environment.
+dnsutils: Provides dig and host commands.Install on Debian/Ubuntu:sudo apt-get install dnsutils -y
+
+
+
+
+📜 License
+MIT License — Feel free to use, modify, and distribute the code as you wish.
+
+🌟 Contributing
+Contributions are welcome! Please submit a pull request or open an issue on GitHub.
