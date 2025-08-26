@@ -1,5 +1,10 @@
 # mxptr-resolver
 
+[![ShellCheck](https://github.com/yourusername/mxptr-resolver/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/yourusername/mxptr-resolver/actions/workflows/shellcheck.yml)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue.svg)
+
+
 A powerful utility for bulk resolving domains, subdomains, and IPs into their corresponding MX, A/AAAA, and PTR records. Ideal for configuring Postfix/Postgrey whitelists, monitoring infrastructure, and diagnosing email delivery issues.
 
 ---
