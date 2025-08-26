@@ -1,0 +1,31 @@
+name: ShellCheck
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  shellcheck:
+    name: Run ShellCheck
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install ShellCheck
+        run: sudo apt-get install -y shellcheck
+
+      - name: Find and check scripts
+        run: |
+          files=$(find . -type f -name "*.sh")
+          if [[ -z "$files" ]]; then
+            echo "⚠️ No .sh files found, skipping ShellCheck."
+            exit 0
+          fi
+          echo "🔍 Checking the following scripts:"
+          echo "$files"
+          # Не падаем даже если есть ошибки
+          shellcheck $files || true
