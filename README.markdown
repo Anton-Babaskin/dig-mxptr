@@ -87,11 +87,6 @@ mail.isbank.com.tr  Host    mail.isbank.com.tr    212.174.x.x    mail.isbank.com
   ```
 
 ---
-
-## 📜 License
-
-[MIT License](LICENSE) — Feel free to use, modify, and distribute the code as you wish.
-
 ---
 
 ## 🌟 Contributing
