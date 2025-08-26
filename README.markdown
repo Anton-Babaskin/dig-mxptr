@@ -1,6 +1,6 @@
 # mxptr-resolver
 
-[![ShellCheck](https://github.com/yourusername/mxptr-resolver/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/yourusername/mxptr-resolver/actions/workflows/shellcheck.yml)
+[![ShellCheck](https://github.com/Anton-Babaskin/dig-mxptr/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/Anton-Babaskin/dig-mxptr/actions/workflows/shellcheck.yml)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-blue.svg)
 
